@@ -173,7 +173,7 @@ export default function TransactionsPage() {
   ]
 
   return (
-    <div className="max-w-2xl mx-auto px-4 py-6">
+    <div className="space-y-4">
       {/* Tab Navigation */}
       <div className="flex border-b border-gray-200 mb-4">
         {tabs.map(t => (
@@ -234,9 +234,9 @@ export default function TransactionsPage() {
 
           {/* Purchase Form Modal */}
           {showPurchaseForm && (
-            <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
+            <div className="fixed inset-x-0 top-0 bottom-16 z-40 flex items-center justify-center p-4">
               <div className="absolute inset-0 bg-black/40" onClick={resetPurchaseForm} />
-              <div className="relative bg-white rounded-xl shadow-xl w-full max-w-lg max-h-[90vh] overflow-y-auto p-6">
+              <div className="relative bg-white rounded-xl shadow-xl w-full max-w-lg max-h-full overflow-y-auto p-6">
                 <h2 className="text-lg font-semibold text-gray-900 mb-4">Catat Pembelian</h2>
                 <form onSubmit={submitPurchase} className="space-y-3">
                   <div className="grid grid-cols-2 gap-3">
@@ -345,9 +345,9 @@ export default function TransactionsPage() {
 
           {/* Sale Form Modal */}
           {showSaleForm && (
-            <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
+            <div className="fixed inset-x-0 top-0 bottom-16 z-40 flex items-center justify-center p-4">
               <div className="absolute inset-0 bg-black/40" onClick={resetSaleForm} />
-              <div className="relative bg-white rounded-xl shadow-xl w-full max-w-lg max-h-[90vh] overflow-y-auto p-6">
+              <div className="relative bg-white rounded-xl shadow-xl w-full max-w-lg max-h-full overflow-y-auto p-6">
                 <h2 className="text-lg font-semibold text-gray-900 mb-4">Catat Penjualan</h2>
                 <form onSubmit={submitSale} className="space-y-3">
                   <div className="grid grid-cols-2 gap-3">
@@ -462,9 +462,9 @@ export default function TransactionsPage() {
 
           {/* Expense Form Modal */}
           {showExpenseForm && (
-            <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
+            <div className="fixed inset-x-0 top-0 bottom-16 z-40 flex items-center justify-center p-4">
               <div className="absolute inset-0 bg-black/40" onClick={resetExpenseForm} />
-              <div className="relative bg-white rounded-xl shadow-xl w-full max-w-md max-h-[90vh] overflow-y-auto p-6">
+              <div className="relative bg-white rounded-xl shadow-xl w-full max-w-md max-h-full overflow-y-auto p-6">
                 <h2 className="text-lg font-semibold text-gray-900 mb-4">
                   {editingExpense ? 'Edit Pengeluaran' : 'Catat Pengeluaran'}
                 </h2>
